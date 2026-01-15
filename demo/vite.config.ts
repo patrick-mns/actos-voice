@@ -12,5 +12,8 @@ export default defineConfig({
       '@actos-voice/llm-webllm': path.resolve(__dirname, '../packages/llm-webllm/src'),
       '@actos-voice/react': path.resolve(__dirname, '../packages/react/src'),
     }
+  },
+  preview: {
+    allowedHosts: true
   }
 })

@@ -1,0 +1,23 @@
+{
+  "name": "@actos-voice/llm-webllm",
+  "version": "0.0.1",
+  "description": "WebLLM provider for ActosVoice",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --watch --dts"
+  },
+  "dependencies": {
+    "@actos-voice/core": "*",
+    "@mlc-ai/web-llm": "^0.2.46"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}

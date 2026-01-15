@@ -1,0 +1,18 @@
+{
+  "name": "actos-voice-monorepo",
+  "private": true,
+  "description": "ActosVoice - Modern Voice AI Library",
+  "workspaces": [
+    "packages/*",
+    "demo"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "dev": "npm run dev --workspaces"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.8",
+    "typescript": "^5.0.0"
+  }
+}

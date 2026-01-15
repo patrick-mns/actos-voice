@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@actos-voice/core": ["packages/core/src"],
+      "@actos-voice/asr-webspeech": ["packages/asr-webspeech/src"],
+      "@actos-voice/llm-webllm": ["packages/llm-webllm/src"],
+      "@actos-voice/react": ["packages/react/src"]
+    }
+  }
+}

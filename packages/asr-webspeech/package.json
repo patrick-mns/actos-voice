@@ -6,7 +6,9 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "../../LICENSE"
   ],
   "publishConfig": {
     "access": "public"
@@ -21,5 +23,23 @@
   "devDependencies": {
     "tsup": "^8.0.0",
     "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "voice",
+    "speech",
+    "asr",
+    "webspeech",
+    "recognition"
+  ],
+  "author": "patrick-mns",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patrick-mns/actos-voice.git",
+    "directory": "packages/asr-webspeech"
+  },
+  "homepage": "https://github.com/patrick-mns/actos-voice#readme",
+  "bugs": {
+    "url": "https://github.com/patrick-mns/actos-voice/issues"
   }
 }

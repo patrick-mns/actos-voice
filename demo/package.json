@@ -17,7 +17,8 @@
     "@actos-voice/core": "*",
     "@actos-voice/asr-webspeech": "*",
     "@actos-voice/llm-webllm": "*",
-    "@actos-voice/react": "*"
+    "@actos-voice/react": "*",
+    "vite": "^7.2.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
@@ -31,15 +32,5 @@
     "globals": "^16.5.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4"
-  },
-  "dependencies": {
-    "@mlc-ai/web-llm": "^0.2.80",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "@actos-voice/core": "*",
-    "@actos-voice/asr-webspeech": "*",
-    "@actos-voice/llm-webllm": "*",
-    "@actos-voice/react": "*",
-    "vite": "^7.2.4"
   }
 }

@@ -6,6 +6,9 @@
     "packages/*",
     "demo"
   ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "build": "npm run build --workspaces",
     "build:demo": "npm run build --workspace=demo",

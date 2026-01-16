@@ -136,6 +136,26 @@ export interface UIStrings {
     githubUrl: string;
     repoUrl: string;
     gitRepo: string;
+    // Explain section
+    explainTitle: string;
+    explainMotivationTitle: string;
+    explainMotivationDesc: string;
+    explainAdvantagesTitle: string;
+    explainAdvantage1: string;
+    explainAdvantage2: string;
+    explainAdvantage3: string;
+    explainAdvantage4: string;
+    explainHowTitle: string;
+    explainHowDesc: string;
+    explainStep1: string;
+    explainStep2: string;
+    explainStep3: string;
+    explainStep4: string;
+    explainUseCasesTitle: string;
+    explainUseCase1: string;
+    explainUseCase2: string;
+    explainUseCase3: string;
+    explainUseCase4: string;
 }
 
 export const UI_STRINGS: Record<Language, UIStrings> = {
@@ -171,7 +191,27 @@ export const UI_STRINGS: Record<Language, UIStrings> = {
         github: 'github.com/patrick-mns',
         githubUrl: 'https://github.com/patrick-mns',
         repoUrl: 'https://github.com/patrick-mns/actos-voice',
-        gitRepo: 'Git Repo'
+        gitRepo: 'Git Repo',
+        // Explain section
+        explainTitle: 'What is ActosVoice?',
+        explainMotivationTitle: 'Why ActosVoice?',
+        explainMotivationDesc: 'Most voice interfaces are rigid - they work with predefined commands. ActosVoice takes a different approach: it\'s a flexible framework that lets you build voice-controlled apps that actually understand what users want, not just what they say word-for-word.',
+        explainAdvantagesTitle: 'Core Philosophy',
+        explainAdvantage1: 'Plugin-based architecture - swap any component',
+        explainAdvantage2: 'LLM-powered understanding - no rigid command matching',
+        explainAdvantage3: 'Tool calling system - voice triggers any function',
+        explainAdvantage4: 'Framework agnostic - React, Vue, vanilla JS, whatever',
+        explainHowTitle: 'How It Works',
+        explainHowDesc: 'ActosVoice is basically three pieces working together:',
+        explainStep1: '1. ASR Provider - captures voice (any speech-to-text)',
+        explainStep2: '2. LLM Provider - understands intent (any language model)',
+        explainStep3: '3. Tool System - executes actions (your custom functions)',
+        explainStep4: '4. You wire it up however you want',
+        explainUseCasesTitle: 'Real Use Cases',
+        explainUseCase1: 'Voice-controlled dashboards without training users',
+        explainUseCase2: 'Accessibility layers for complex apps',
+        explainUseCase3: 'Hands-free workflows for specialized environments',
+        explainUseCase4: 'Prototyping conversational interfaces fast'
     },
     pt: {
         title: 'ActosVoice',
@@ -205,6 +245,26 @@ export const UI_STRINGS: Record<Language, UIStrings> = {
         github: 'github.com/patrick-mns',
         githubUrl: 'https://github.com/patrick-mns',
         repoUrl: 'https://github.com/patrick-mns/actos-voice',
-        gitRepo: 'Repositório'
+        gitRepo: 'Repositório',
+        // Explain section
+        explainTitle: 'O que é o ActosVoice?',
+        explainMotivationTitle: '🎯 Por que ActosVoice?',
+        explainMotivationDesc: 'A maioria das interfaces de voz são rígidas - funcionam com comandos predefinidos. ActosVoice é diferente: é um framework flexível que te deixa construir apps controlados por voz que realmente entendem o que o usuário quer, não só o que ele diz palavra por palavra.',
+        explainAdvantagesTitle: '⚡ Filosofia Central',
+        explainAdvantage1: 'Arquitetura baseada em plugins - troque qualquer componente',
+        explainAdvantage2: 'Compreensão via LLM - sem matching rígido de comandos',
+        explainAdvantage3: 'Sistema de tool calling - voz dispara qualquer função',
+        explainAdvantage4: 'Framework agnóstico - React, Vue, JS puro, tanto faz',
+        explainHowTitle: '🔧 Como Funciona',
+        explainHowDesc: 'ActosVoice são basicamente três peças trabalhando juntas:',
+        explainStep1: '1. ASR Provider - captura voz (qualquer speech-to-text)',
+        explainStep2: '2. LLM Provider - entende intenção (qualquer modelo)',
+        explainStep3: '3. Tool System - executa ações (suas funções customizadas)',
+        explainStep4: '4. Você conecta do jeito que quiser',
+        explainUseCasesTitle: '💡 Casos de Uso Reais',
+        explainUseCase1: 'Dashboards por voz sem treinar usuários',
+        explainUseCase2: 'Camadas de acessibilidade para apps complexos',
+        explainUseCase3: 'Workflows hands-free para ambientes especializados',
+        explainUseCase4: 'Prototipagem rápida de interfaces conversacionais'
     }
 };

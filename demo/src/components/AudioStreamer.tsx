@@ -13,6 +13,7 @@ const AudioStreamer = () => {
     const scrollEndRef = useRef<HTMLDivElement>(null);
     const [toolLogs, setToolLogs] = useState<string[]>([]);
     const [showSidebar, setShowSidebar] = useState(true);
+    const [showExplainSidebar, setShowExplainSidebar] = useState(true);
 
     const t = UI_STRINGS[language];
 
@@ -119,6 +120,40 @@ const AudioStreamer = () => {
             transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
             opacity: showSidebar ? 1 : 0,
             position: 'relative' as const,
+        },
+        explainSidebar: {
+            width: showExplainSidebar ? '350px' : '0px',
+            height: '100%',
+            backgroundColor: 'rgba(0,0,0,0.3)',
+            backdropFilter: 'blur(10px)',
+            borderLeft: showExplainSidebar ? '1px solid rgba(255,255,255,0.1)' : 'none',
+            display: 'flex',
+            flexDirection: 'column' as const,
+            padding: showExplainSidebar ? '30px' : '0px',
+            gap: '25px',
+            overflowY: 'auto' as const,
+            overflowX: 'hidden' as const,
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            opacity: showExplainSidebar ? 1 : 0,
+            position: 'relative' as const,
+        },
+        explainToggleBtn: {
+            position: 'absolute' as const,
+            top: '20px',
+            right: showExplainSidebar ? '365px' : '20px',
+            zIndex: 100,
+            backgroundColor: 'rgba(255,255,255,0.1)',
+            border: 'none',
+            borderRadius: '50%',
+            width: '40px',
+            height: '40px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            color: 'white',
+            backdropFilter: 'blur(5px)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         },
         toggleBtn: {
             position: 'absolute' as const,
@@ -300,7 +335,7 @@ const AudioStreamer = () => {
             <aside style={styles.sidebar}>
                 <header style={{ flexShrink: 0 }}>
                     <h1 style={{fontSize: '1.8rem', margin: 0, letterSpacing: '-1px'}}>
-                        {t.title} 
+                        {t.title}
                         <span style={{
                             fontSize: '0.6rem',
                             backgroundColor: '#1db954',
@@ -424,7 +459,8 @@ const AudioStreamer = () => {
                     style={{
                         position: 'absolute',
                         top: '20px',
-                        right: '20px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
                         zIndex: 100,
                         backgroundColor: 'rgba(255,255,255,0.1)',
                         color: 'white',
@@ -508,6 +544,54 @@ const AudioStreamer = () => {
                     </div>
                 </div>
             </main>
+
+            {/* Botão toggle da sidebar direita */}
+            <button 
+                style={styles.explainToggleBtn}
+                onClick={() => setShowExplainSidebar(!showExplainSidebar)}
+            >
+                {showExplainSidebar ? '→' : '?'}
+            </button>
+
+            {/* PAINEL DIREITO: EXPLICAÇÃO */}
+            <aside style={styles.explainSidebar}>
+                <header style={{ flexShrink: 0 }}>
+                    <h1 style={{fontSize: '1.8rem', margin: 0, letterSpacing: '-1px', color: '#1db954'}}>
+                        {t.explainTitle}
+                    </h1>
+                    <p style={{fontSize: '0.8rem', opacity: 0.6, marginTop: '5px'}}>Learn about this library</p>
+                </header>
+
+                <div style={{flex: 1, overflowY: 'auto', fontSize: '0.85rem', lineHeight: 1.7, paddingRight: '10px'}}>
+                    <h2 style={{fontWeight: 700, marginBottom: '12px', marginTop: '20px', color: 'white', fontSize: '1.05rem'}}>{t.explainMotivationTitle}</h2>
+                    <p style={{margin: '0 0 20px 0', opacity: 0.9}}>{t.explainMotivationDesc}</p>
+                    
+                    <h2 style={{fontWeight: 700, marginBottom: '12px', marginTop: '25px', color: 'white', fontSize: '1.05rem'}}>{t.explainAdvantagesTitle}</h2>
+                    <ul style={{margin: '0 0 20px 0', paddingLeft: '25px', opacity: 0.9}}>
+                        <li style={{marginBottom: '8px'}}>{t.explainAdvantage1}</li>
+                        <li style={{marginBottom: '8px'}}>{t.explainAdvantage2}</li>
+                        <li style={{marginBottom: '8px'}}>{t.explainAdvantage3}</li>
+                        <li style={{marginBottom: '8px'}}>{t.explainAdvantage4}</li>
+                    </ul>
+                    
+                    <h2 style={{fontWeight: 700, marginBottom: '12px', marginTop: '25px', color: 'white', fontSize: '1.05rem'}}>{t.explainHowTitle}</h2>
+                    <p style={{margin: '0 0 12px 0', opacity: 0.9}}>{t.explainHowDesc}</p>
+                    <ol style={{margin: '0 0 20px 0', paddingLeft: '25px', opacity: 0.9}}>
+                        <li style={{marginBottom: '8px'}}>{t.explainStep1}</li>
+                        <li style={{marginBottom: '8px'}}>{t.explainStep2}</li>
+                        <li style={{marginBottom: '8px'}}>{t.explainStep3}</li>
+                        <li style={{marginBottom: '8px'}}>{t.explainStep4}</li>
+                    </ol>
+                    
+                    <h2 style={{fontWeight: 700, marginBottom: '12px', marginTop: '25px', color: 'white', fontSize: '1.05rem'}}>{t.explainUseCasesTitle}</h2>
+                    <ul style={{margin: '0 0 20px 0', paddingLeft: '25px', opacity: 0.9}}>
+                        <li style={{marginBottom: '8px'}}>{t.explainUseCase1}</li>
+                        <li style={{marginBottom: '8px'}}>{t.explainUseCase2}</li>
+                        <li style={{marginBottom: '8px'}}>{t.explainUseCase3}</li>
+                        <li style={{marginBottom: '8px'}}>{t.explainUseCase4}</li>
+                    </ul>
+                </div>
+            </aside>
             
             {/* Simple CSS animation injection */}
             <style>{`

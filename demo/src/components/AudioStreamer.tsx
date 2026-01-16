@@ -37,7 +37,7 @@ const AudioStreamer = () => {
         },
         open_modal: () => {
             setIsModalOpen(true);
-            setModalContent("Esta é uma ação disparada por voz!");
+            setModalContent("This is a voice-triggered action!");
             setToolLogs(prev => [...prev, `open_modal()`]);
         },
         close_modal: () => {
@@ -47,7 +47,7 @@ const AudioStreamer = () => {
         close_session: stopAction
     }), [language, stopAction]);
 
-    // Configuração dos provedores
+    // Provider configuration
     const asr = useMemo(() => webSpeech(), []);
     const llm = useMemo(() => webLLM({
         modelId: "Llama-3.2-1B-Instruct-q4f16_1-MLC"
@@ -276,7 +276,7 @@ const AudioStreamer = () => {
 
     return (
         <div style={styles.container}>
-            {/* Sidebar Toggles */}
+            {/* Sidebar Toggle */}
             <button 
                 style={styles.toggleBtn}
                 onClick={() => setShowSidebar(!showSidebar)}
@@ -284,7 +284,7 @@ const AudioStreamer = () => {
                 {showSidebar ? '←' : '→'}
             </button>
 
-            {/* Modal de Teste */}
+            {/* Test Modal */}
             {isModalOpen && (
                 <>
                     <div style={{
@@ -331,7 +331,7 @@ const AudioStreamer = () => {
                 </>
             )}
 
-            {/* PAINEL ESQUERDO: CONFIG & TOOLS */}
+            {/* LEFT PANEL: CONFIG & TOOLS */}
             <aside style={styles.sidebar}>
                 <header style={{ flexShrink: 0 }}>
                     <h1 style={{fontSize: '1.8rem', margin: 0, letterSpacing: '-1px'}}>
@@ -449,7 +449,7 @@ const AudioStreamer = () => {
                 </div>
             </aside>
 
-            {/* PAINEL CENTRAL: INTERAÇÃO */}
+            {/* CENTRAL PANEL: INTERACTION */}
             <main style={styles.mainContent}>
                 {/* GitHub Link Button */}
                 <a 
@@ -545,7 +545,7 @@ const AudioStreamer = () => {
                 </div>
             </main>
 
-            {/* Botão toggle da sidebar direita */}
+            {/* Right sidebar toggle button */}
             <button 
                 style={styles.explainToggleBtn}
                 onClick={() => setShowExplainSidebar(!showExplainSidebar)}
@@ -553,7 +553,7 @@ const AudioStreamer = () => {
                 {showExplainSidebar ? '→' : '?'}
             </button>
 
-            {/* PAINEL DIREITO: EXPLICAÇÃO */}
+            {/* RIGHT PANEL: EXPLANATION */}
             <aside style={styles.explainSidebar}>
                 <header style={{ flexShrink: 0 }}>
                     <h1 style={{fontSize: '1.8rem', margin: 0, letterSpacing: '-1px', color: '#1db954'}}>

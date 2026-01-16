@@ -99,7 +99,7 @@ export class WebLLMProvider implements LLMInstance {
 
       const content = reply.choices[0].message.content || '{}';
       
-      // Limpa possíveis blocos de código markdown
+      // Clean possible markdown code blocks
       const jsonStr = content.replace(/```json\n?|```/g, '').trim();
       const result = JSON.parse(jsonStr) as ToolCallResult;
       

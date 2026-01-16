@@ -9,7 +9,7 @@ declare global {
     }
 }
 
-// Modelo pequeno e rápido - Llama 3.2 1B é ideal para tool calling
+// Small and fast model - Llama 3.2 1B is ideal for tool calling
 const MODEL_ID = 'Llama-3.2-1B-Instruct-q4f16_1-MLC';
 
 export type Language = 'en' | 'pt';

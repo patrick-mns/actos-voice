@@ -1,6 +1,7 @@
 {
   "name": "actos-voice-monorepo",
   "private": true,
+  "homepage": "https://actosvoice.com",
   "description": "ActosVoice - Modern Voice AI Library",
   "workspaces": [
     "packages/*",

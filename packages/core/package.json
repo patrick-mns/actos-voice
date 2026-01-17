@@ -38,8 +38,12 @@
     "url": "https://github.com/patrick-mns/actos-voice/issues"
   },
   "devDependencies": {
+    "@types/debug": "^4.1.12",
     "tsup": "^8.0.0",
     "typescript": "^5.0.0",
     "vitest": "^1.0.0"
+  },
+  "dependencies": {
+    "debug": "^4.4.3"
   }
 }

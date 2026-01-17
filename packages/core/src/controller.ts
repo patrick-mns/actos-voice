@@ -1,4 +1,7 @@
 import type { ASRInstance, LLMInstance, ActosVoiceConfig, Language, Tool } from './types';
+import { createLogger } from './logger';
+
+const logger = createLogger('controller');
 
 export class ActosVoiceController {
   private asr: ASRInstance;
@@ -71,7 +74,7 @@ export class ActosVoiceController {
     });
 
     this.asr.onError((error) => {
-      console.error('❌ ASR Error:', error);
+      logger.error('ASR Error:', error);
     });
   }
 
@@ -93,13 +96,13 @@ export class ActosVoiceController {
           const tool = this.tools[result.tool];
           await tool.execute(result.args);
         } catch (toolError) {
-          console.error(`❌ Error executing tool ${result.tool}:`, toolError);
+          logger.error(`Error executing tool ${result.tool}:`, toolError);
         }
       } else if (result.tool) {
-        console.warn(`⚠️ Tool "${result.tool}" requested by LLM but not found in config.tools`);
+        logger.warn(`Tool "${result.tool}" requested by LLM but not found in config.tools`);
       }
     } catch (error) {
-      console.error('❌ LLM Processing Error:', error);
+      logger.error('LLM Processing Error:', error);
     } finally {
       this.isProcessing = false;
     }

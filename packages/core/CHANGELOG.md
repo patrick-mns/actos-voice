@@ -1,5 +1,11 @@
 # @actos-voice/core
 
+## 0.1.2
+
+### Patch Changes
+
+- Remove console.log calls and replace with internal logger utility for better production readiness.
+
 ## 0.1.1
 
 ### Patch Changes

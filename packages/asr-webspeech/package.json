@@ -1,6 +1,6 @@
 {
   "name": "@actos-voice/asr-webspeech",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "WebSpeech ASR provider for ActosVoice",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

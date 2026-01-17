@@ -1,6 +1,6 @@
 {
   "name": "@actos-voice/react",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "React hooks and components for ActosVoice",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

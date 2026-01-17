@@ -1,5 +1,11 @@
 # @actos-voice/core
 
+## 0.1.3
+
+### Patch Changes
+
+- Update project homepage to https://actosvoice.com.
+
 ## 0.1.2
 
 ### Patch Changes

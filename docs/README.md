@@ -85,6 +85,38 @@ function App() {
 - Browser with WebGPU (Chrome 113+, Edge 113+) for client-side LLM
 - Microphone for ASR
 
+## 🤝 Contributing
+
+### Commit Convention
+
+This project follows the [Conventional Commits](https://www.conventionalcommits.org/) specification. All commit messages must follow this format:
+
+```
+<type>: <description>
+
+[optional body]
+
+[optional footer]
+```
+
+**Types:**
+- `feat:` — New feature
+- `fix:` — Bug fix
+- `docs:` — Documentation changes
+- `style:` — Code style changes (formatting, etc.)
+- `refactor:` — Code refactoring
+- `test:` — Adding or updating tests
+- `chore:` — Maintenance tasks (dependencies, build, etc.)
+- `perf:` — Performance improvements
+
+**Examples:**
+```bash
+feat: add support for Whisper ASR provider
+fix: resolve memory leak in LLM streaming
+docs: update installation instructions
+chore: bump dependencies to latest versions
+```
+
 ## 📄 License
 
 MIT
